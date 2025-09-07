@@ -10,10 +10,6 @@
   <div class="wrap">
     <div class="toolbar">
       <div class="title">Memoria — Mapa Poético Interactivo</div>
-      <label class="btn">
-        <input id="file" type="file" accept="image/*" style="display:none;">
-        Cargar mapa de fondo
-      </label>
       <button id="testBtn" class="btn">Probar resaltado</button>
       <div class="hint">Toca o pasa el cursor por palabras para iluminar calles.</div>
     </div>
@@ -31,9 +27,15 @@
     </div>
   </div>
 
-  <!-- Change the filename here depending on the option you pick:
-       A) app-embedded.js  (image base64 embedded)
-       B) app-fixed.js      (loads background.png from the repo) -->
-  <script src="app-embedded.js" defer></script>
+  <div id="peg" class="peg" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <circle cx="12" cy="6" r="4"></circle>
+      <rect x="9" y="10" width="6" height="8" rx="2"></rect>
+      <path d="M9 20 L7 23" stroke-width="2" stroke="currentColor" fill="none"></path>
+      <path d="M15 20 L17 23" stroke-width="2" stroke="currentColor" fill="none"></path>
+    </svg>
+  </div>
+
+  <script src="app-fixed.js" defer></script>
 </body>
 </html>
